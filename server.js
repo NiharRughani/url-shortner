@@ -8,8 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose
   .connect(
-    "mongodb+srv://niharrughani30_db_user:database1@cluster0.immgjwi.mongodb.net/",
-    { dbname: "Nodejs_course_mastery" }
+    "mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/<database-name>"
   )
   .then(() => console.log("MongoDb Connected..!"))
   .catch((err) => console.log(err));
@@ -30,3 +29,4 @@ const port = 1000;
 app.listen(port, () =>
   console.log(`server is running on port http://localhost:${port}`)
 );
+
